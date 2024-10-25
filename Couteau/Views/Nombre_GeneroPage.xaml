@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Couteau.Views.Nombre_GeneroPage"
+             Title="Nombre - Genero">
+    <Grid Padding="20" >
+        <Image
+     Source="genero.jpg"
+     Aspect="AspectFill"
+     Opacity="0.6" 
+     Grid.RowSpan="2"
+
+    ></Image>
+      
+                          
+            <BoxView x:Name="GenderBox" HeightRequest="100" WidthRequest="100" HorizontalOptions="Center" VerticalOptions="Center"/>
+
+      
+        
+        <StackLayout Grid.Row="1" HorizontalOptions="Center" VerticalOptions="Start" Spacing="25" Padding="5"  Margin="0, 40, 0, 10">
+            <Label Text="Nombre = Genero" FontSize="30" HorizontalOptions="Center" FontFamily="bold"/>
+           
+            <Entry x:Name="NameEntry" Placeholder="Nombre" FontAttributes="Bold" FontSize="20" />
+
+          
+            <Button Text="Predecir Género" Clicked="Button_Clicked" BackgroundColor="#95a5a6" TextColor="White" FontSize="15" CornerRadius="10"/>
+
+
+
+            <Label x:Name="ResultLabel" FontSize="20" HorizontalOptions="Center" FontAttributes="Bold"  />
+        </StackLayout>
+
+
+    </Grid>
+</ContentPage>

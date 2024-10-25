@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Couteau.Views.WordPressPage"
+             Title="WordPress">
+    <StackLayout Padding="10" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand">
+
+        <!-- Logo del sitio web -->
+        <Image x:Name="SiteLogo" HeightRequest="100" WidthRequest="100" />
+
+        <!-- Título de la página -->
+        <Label Text="Últimas Noticias" FontSize="Large" FontAttributes="Bold" HorizontalOptions="Center"/>
+
+        <!-- Lista de noticias -->
+        <CollectionView x:Name="NewsCollection">
+            <CollectionView.ItemTemplate>
+                <DataTemplate>
+                    <StackLayout Padding="10">
+                        <!-- Título de la noticia -->
+                        <Label Text="{Binding title.rendered}" FontSize="Medium" FontAttributes="Bold"/>
+                        <!-- Resumen de la noticia -->
+                        <Label Text="{Binding excerpt.rendered}" FontSize="Small" LineBreakMode="TailTruncation"/>
+                        <!-- Botón para visitar la noticia -->
+                        <Button Text="Leer más" Command="{Binding OpenNewsCommand}" />
+                    </StackLayout>
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+        </CollectionView>
+    </StackLayout>
+</ContentPage>

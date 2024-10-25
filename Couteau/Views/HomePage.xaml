@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Couteau.Views.HomePage"
+             Title="Home">
+    <Grid>
+        <Image
+         Source="fondo.jpg"
+         Aspect="AspectFill"
+         Opacity="0.9" 
+         Grid.RowSpan="2"
+        
+        ></Image>
+        <!-- Title on top of the video -->
+        <Label 
+         Text="Couteau"
+         FontSize="45"             
+         FontAttributes="Bold"
+         BackgroundColor="#ccd1d1"
+           
+         TextColor="White"           
+         Padding="10"
+         HorizontalOptions="Center"
+         VerticalOptions="Start"
+         HorizontalTextAlignment="Center"
+         VerticalTextAlignment="Center"
+    
+         Margin="0, 5, 0, 0"
+    
+        />
+        
+        <Image Source="caja.jpg"
+        HeightRequest="180"
+        WidthRequest="180"
+        HorizontalOptions="Center"
+        VerticalOptions="Start"
+        Aspect="AspectFill"
+        Margin="0, 100, 0, 10"
+        BackgroundColor="LightGray"
+        Opacity="0.9" />
+
+
+
+        <StackLayout Grid.Row="1" HorizontalOptions="Center" VerticalOptions="End" Spacing="10" Padding="5">
+            <Button x:Name="Nombre_Genero" Clicked="Nombre_Genero_Clicked" Text="Nombre - Genero" BackgroundColor="#95a5a6" TextColor="White" FontSize="15" CornerRadius="10"/>
+            <Button x:Name="Nombre_Edad" Clicked="Nombre_Edad_Clicked" Text="Nombre - Edad"  BackgroundColor="#95a5a6" TextColor="White" FontSize="15" CornerRadius="10"/>
+            <Button x:Name="Pais_Universidad" Clicked="Pais_Universidad_Clicked"  Text="Pais - Universidades"  BackgroundColor="#95a5a6" TextColor="White" FontSize="15" CornerRadius="10"/>
+            <Button x:Name="Clima"  Text="Clima RD" Clicked="Clima_Clicked"  BackgroundColor="#95a5a6" TextColor="White" FontSize="15" CornerRadius="10"/>
+            <Button x:Name="WordPress"  Text="Pagina WordPress" Clicked="WordPress_Clicked" BackgroundColor="#95a5a6" TextColor="White" FontSize="15" CornerRadius="10"/>
+            <Button x:Name="Contactame"  Text="Contratame" Clicked="Contactame_Clicked" BackgroundColor="#95a5a6" TextColor="White" FontSize="15" CornerRadius="10"/>
+
+        </StackLayout>
+
+    </Grid>
+</ContentPage>

@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Couteau.Views.ContactamePage"
+             Title="Contactame">
+    <ContentPage.Resources>
+        <!-- Definimos un estilo para los labels de título -->
+        <Style TargetType="Label" x:Key="TitleLabelStyle">
+            <Setter Property="FontSize" Value="24" />
+            <Setter Property="FontAttributes" Value="Bold" />
+            <Setter Property="TextColor" Value="DarkBlue" />
+            <Setter Property="HorizontalOptions" Value="Center" />
+            <Setter Property="Margin" Value="0, 20, 0, 10" />
+        </Style>
+        <!-- Definimos un estilo para los detalles de contacto -->
+        <Style TargetType="Label" x:Key="ContactInfoLabelStyle">
+            <Setter Property="FontSize" Value="18" />
+            <Setter Property="TextColor" Value="Black" />
+            <Setter Property="Margin" Value="0, 5, 0, 5" />
+        </Style>
+    </ContentPage.Resources>
+
+    <Grid Padding="20" BackgroundColor="#eaeded">
+        <!-- Título Principal -->
+        <Label Text="Contáctame"
+           Style="{StaticResource TitleLabelStyle}" />
+
+        <StackLayout VerticalOptions="Center" Spacing="20">
+
+            <!-- Foto de perfil -->
+            <Image Source="foto.jpg"
+               HeightRequest="200"
+               WidthRequest="200"
+               HorizontalOptions="Center"
+               VerticalOptions="Center"
+               Aspect="AspectFill"
+               Margin="0, 15, 0, 10"
+               BackgroundColor="LightGray"
+               Opacity="0.9" />
+
+            <!-- Datos de contacto -->
+            <StackLayout Padding="10" Spacing="10" HorizontalOptions="Center">
+                <Label Text="Nombre: Esteilor Paniagua Mateo"
+                   Style="{StaticResource ContactInfoLabelStyle}" />
+
+                <Label Text="Email: esteilorpaniaguamateo@gmail.com"
+                   Style="{StaticResource ContactInfoLabelStyle}" />
+
+                <Label Text="Teléfono: +1829-354-5345"
+                   Style="{StaticResource ContactInfoLabelStyle}" />
+
+                <Label Text="LinkedIn: linkedin.com/in/Esteilor Paniagua Mateo"
+                   Style="{StaticResource ContactInfoLabelStyle}" />
+
+                <Label Text="GitHub: github.com/Steilor"
+                   Style="{StaticResource ContactInfoLabelStyle}" />
+            </StackLayout>
+
+            <!-- Botón para enviar email directamente -->
+            <Button Text="Enviar Email"
+                HorizontalOptions="Center"
+                VerticalOptions="End"
+                BackgroundColor="DarkBlue"
+                TextColor="White"
+                Clicked="EnviarEmail_Clicked" />
+        </StackLayout>
+    </Grid>
+</ContentPage>

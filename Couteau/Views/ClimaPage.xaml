@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Couteau.Views.ClimaPage"
+             Title="Clima Dominicano">
+    <Grid Padding="10" >
+        <Image
+         Source="clima.jpg"
+         Aspect="AspectFill"
+         Opacity="0.6" 
+         Grid.RowSpan="2"
+
+        ></Image>
+
+
+        <StackLayout Grid.Row="1" HorizontalOptions="Center" VerticalOptions="Start" Spacing="25" Padding="5"  Margin="0, 100, 0, 10">
+            <!-- Título de la página -->
+            <Label Text="Clima en República Dominicana" 
+           FontSize="Large" 
+           FontAttributes="Bold" 
+           HorizontalOptions="Center"/>
+
+            <!-- Fecha actual -->
+            <Label x:Name="CurrentDateLabel" 
+           FontSize="Medium" 
+           HorizontalOptions="Center"/>
+
+            <!-- Información del clima -->
+            <Label x:Name="WeatherDescriptionLabel" 
+           Text="Cargando clima..."
+           FontSize="Medium" 
+           HorizontalOptions="Center"/>
+
+            <!-- Temperatura -->
+            <Label x:Name="TemperatureLabel" 
+           FontSize="Medium" 
+           HorizontalOptions="Center"/>
+        </StackLayout>
+
+     
+    </Grid>
+</ContentPage>

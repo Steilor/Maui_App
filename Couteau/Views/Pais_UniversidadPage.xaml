@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Couteau.Views.Pais_UniversidadPage"
+             Title="Pais - Universidad">
+    <Grid Padding="20">
+        <Image
+         Source="fondo.jpg"
+         Aspect="AspectFill"
+         Opacity="0.9" 
+         Grid.RowSpan="2"
+
+        ></Image>
+
+      
+
+        <StackLayout Grid.Row="1" HorizontalOptions="Center" VerticalOptions="Start" Spacing="25" Padding="5"  Margin="0, 40, 0, 10">
+           
+            <Label Text="Universidades de un Pais:" 
+         FontSize="30"
+         HorizontalOptions="Center"
+         FontFamily="bold"/>
+
+            <Entry x:Name="countryEntry"
+         Placeholder="Pais en ingles"
+         FontSize="20"
+         HorizontalOptions="FillAndExpand"
+          FontAttributes="Bold"/>
+
+            <Button Text="Buscar"
+          FontSize="15"
+          Clicked="Button_Clicked"
+          HorizontalOptions="Center" 
+          CornerRadius="10"
+          TextColor="White"
+           BackgroundColor="#95a5a6" />
+        </StackLayout>
+
+
+
+        <ListView x:Name="universityListView"
+                  IsVisible="False"
+                 >
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <StackLayout Padding="10">
+                            <Label Text="{Binding Name}" 
+                                   FontSize="18" 
+                                   FontAttributes="Bold" />
+                            <Label Text="{Binding Domain}" 
+                                   FontSize="16" 
+                                   TextColor="Gray" />
+                            <Label Text="{Binding WebPage}" 
+                                   FontSize="16"
+                                   TextColor="Blue" />
+                        </StackLayout>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+
+    </Grid>
+</ContentPage>
